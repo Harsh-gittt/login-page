@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <img src="images/home.png" alt="home image">
+        </div>
+
+        <div class="right">
+            <div class="right-wrapper">
+                <div class="upper-text">
+                    <h1>Welcome Back</h1>
+                    <p> &nbsp; Sign in to continue your progress</p>
+                </div>
+
+                <form class="login-form">
+            
+                    <label for="username">Username/Email</label>
+                    <input type="text" id="username" name="username"  required>
+            
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password"  required>
+            
+                    <div class="form-flex">
+                        <div class="remember-me">
+                            <input type="checkbox" id="remember" name="remember">
+                            <label for="remember">Remember Me</label>
+                        </div>
+
+                        <p>Forget Password?</p>
+                    </div>
+            
+                    <button type="submit" id="submit" class="sign-in-button">sign in</button>
+                </form>
+
+                <!-- <button class="sign-in-button">sign in</button> -->
+
+                <div class="other-options">
+                    <p>or login with</p>
+                    <div class="login-icons">
+                        <div class="icon"><img src="images/insta-icon.png" alt="insta-icon"></div>
+                        <div class="icon"><img src="images/facebook-icon.png" alt="facebook-icon"></div>
+                        <div class="icon"><img src="images/google-icon.png" alt="google-icon"></div>
+                        <div class="icon"><img src="images/twitter-icon.png" alt="twitter-icon"></div>
+                    </div>
+                </div>
+
+                <div class="sign-up">Don't have an account? <b class="sign-up-link">Register Here</b></div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>

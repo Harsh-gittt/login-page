@@ -1,0 +1,49 @@
+// Import the Firebase SDKs needed
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
+import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-database.js";
+
+// Firebase configuration
+const firebaseConfig = {
+    apiKey: "AIzaSyCw_OnAaRGs08AmiKca-POiL4n9biWM8tw",
+    authDomain: "loginform-96451.firebaseapp.com",
+    projectId: "loginform-96451",
+    storageBucket: "loginform-96451.appspot.com",
+    messagingSenderId: "51790466765",
+    appId: "1:51790466765:web:fc7130d9cbcbfebd6de384"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const db = getDatabase(app);
+
+// Validate form and submit data
+document.querySelector("#submit").addEventListener('click', (event) => {
+    event.preventDefault();
+
+    // Get input values
+    const username = document.querySelector('#username').value;
+    const password = document.querySelector('#password').value;
+
+    // Custom validation
+    if (username === "" || password === "") {
+        alert("Please fill out all required fields.");
+        return;
+    }
+
+    if (password.length < 6) {
+        alert("Password must be at least 6 characters long.");
+        return;
+    }
+
+    // Send data to Firebase
+    set(ref(db, 'user/' + username), {
+        username: username,
+        password: password
+    })
+    .then(() => {
+        alert("Login Successful!");
+    })
+    .catch((error) => {
+        alert("Error: " + error.message);
+    });
+});
