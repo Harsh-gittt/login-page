@@ -21,8 +21,10 @@ document.querySelector("#submit").addEventListener('click', (event) => {
     event.preventDefault();
 
     // Get input values
-    const username = document.querySelector('#username').value;
-    const password = document.querySelector('#password').value;
+    const usernameBlock = document.querySelector('#username');
+    const passwordBlock = document.querySelector('#password');
+    const username = usernameBlock.value;
+    const password = passwordBlock.value;
 
     // Custom validation
     if (username === "" || password === "") {
@@ -42,8 +44,7 @@ document.querySelector("#submit").addEventListener('click', (event) => {
     })
     .then(() => {
         alert("Login Successful!");
+        usernameBlock.value = '';
+        passwordBlock.value = '';
     })
-    .catch((error) => {
-        alert("Error: " + error.message);
-    });
 });
