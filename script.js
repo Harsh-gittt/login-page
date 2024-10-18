@@ -20,13 +20,11 @@ const db = getDatabase(app);
 document.querySelector("#submit").addEventListener('click', (event) => {
     event.preventDefault();
 
-    // Get input values
     const usernameBlock = document.querySelector('#username');
     const passwordBlock = document.querySelector('#password');
     const username = usernameBlock.value;
     const password = passwordBlock.value;
 
-    // Custom validation
     if (username === "" || password === "") {
         alert("Please fill out all required fields.");
         return;
