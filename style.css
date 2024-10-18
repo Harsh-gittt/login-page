@@ -187,7 +187,7 @@ html,body{
         font-size: 2.5rem;
     }
 
-    .login-form>input, .form-flex, .sign-in-button, .other-options, .sign-up{
+    .login-form>input, .form-flex, .sign-in-button, .other-options>p, .login-icons, .sign-up{
         width: 100%;
     }
 }
