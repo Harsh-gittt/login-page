@@ -28,6 +28,7 @@ html,body{
 
 .left>img{
     max-width: 90%;
+    max-height: 70%;
 }
 
 .right{
@@ -40,10 +41,12 @@ html,body{
 .right-wrapper{
     height: fit-content;
     width: 65%;
+    max-height: 90vh;
     margin: auto;
     display: flex;
     flex-direction: column;
     gap: 3rem;
+    overflow-y: auto;
 }
 
 .upper-text>h1{
